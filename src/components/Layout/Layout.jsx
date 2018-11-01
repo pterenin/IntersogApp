@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Drawer from "../Drawer/Drawer";
 import { POSITIONS, SIZE_LIMITS, INITIAL_SIZE } from '../../data';
+const Logo = require('../../assets/Logo.png');
 
 export default class Layout extends Component {
   constructor() {
@@ -56,8 +57,7 @@ export default class Layout extends Component {
   render() {
     return (
       <div className="app">
-        <img src="../../public/Logo.png" alt=""/>
-        <h1>Intersog App</h1>
+        <h1><img src={Logo} alt=""/></h1>
         <Drawer
           width = { this.state.width }
           height = { this.state.height }
