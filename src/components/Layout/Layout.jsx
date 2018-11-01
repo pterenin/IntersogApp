@@ -20,13 +20,15 @@ export default class Layout extends Component {
   }
   setWidth() {
     let width = this.state.xPosition;
-    if (width > SIZE_LIMITS.maxWidth) width = SIZE_LIMITS.maxWidth;
+    const max = window.innerWidth - 20;
+    if (width > max) width = max;
     if (width < SIZE_LIMITS.minWidth) width = SIZE_LIMITS.minWidth;
     this.setState({ width });
   }
   setHeight() {
     let height = this.state.yPosition;
-    if (height > SIZE_LIMITS.maxHeight) height = SIZE_LIMITS.maxHeight;
+    const max = window.innerHeight - 60;
+    if (height > max) height = max;
     if (height < SIZE_LIMITS.minHeight) height = SIZE_LIMITS.minHeight;
     this.setState({ height });
   }
