@@ -1,0 +1,101 @@
+.attachment {
+  float: left;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-bottom: 1px dashed;
+  border-color: rgba(0,0,0,.3);
+}
+
+.attachment:hover {
+  background: #fff;
+}
+
+.attachment .row {
+  float: left;
+  width: 100%;
+}
+
+.attachment .fa-file {
+  font-size: 40px;
+  color: rgba(0, 0, 0, .2);
+  position: relative;
+  float: left;
+}
+
+.attachment .fa-file .file-type {
+  font-family: sans-serif;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 6px;
+  position: absolute;
+  bottom: 6px;
+  right: 4px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.attachment:nth-child(1n) .fa-file .file-type{
+  background: #f15642;
+}
+.attachment:nth-child(2n) .fa-file .file-type{
+  background: #94e06a;
+}
+.attachment:nth-child(3n) .fa-file .file-type{
+  background: #4a90e2;
+}
+
+.attachment .file-name {
+  float: left;
+  margin-left: 10px;
+  line-height: 40px;
+  max-width: calc(100% - 80px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.attachment .fa-trash-o {
+  font-size: 30px;
+  cursor: pointer;
+  color: rgba(0,0,0,.3);
+  float: right;
+  display: none;
+}
+
+.attachment:hover .fa-trash-o {
+  display: block;
+}
+
+.attachment .fa-trash-o:hover {
+  color: #fe6c6a;
+}
+
+
+
+.attachment .row span {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-weight: 600;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+
+.attachment .row span.provider {
+  font-weight: 100;
+  padding-top: 0;
+  font-size: 12px;
+  opacity: .5;
+}
+
+.attachment span.date {
+  font-size: 12px;
+  float: right;
+  font-weight: 100;
+  opacity: .5;
+  text-align: right;
+}

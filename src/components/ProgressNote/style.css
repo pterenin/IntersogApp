@@ -1,0 +1,206 @@
+.progress-note {
+  float: left;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px dashed;
+  border-color: rgba(0,0,0,.3);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.progress-note:hover {
+  background: #fff;
+}
+
+.progress-note .header {
+  float: left;
+  width: 100%;
+}
+
+
+.progress-note .initials {
+  background: green;
+  float: left;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  line-height: 50px;
+  border-radius: 100%;
+  font-weight: 600;
+}
+.progress-note:nth-child(1n) .initials {
+  background: #fece8a;
+}
+.progress-note:nth-child(2n) .initials {
+  background: #9be4eb;
+}
+.progress-note:nth-child(3n) .initials {
+  background: #bdcae2;
+}
+
+.progress-note .header span {
+  float: left;
+  width: calc(100% - 50px);
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+
+.progress-note .header span.provider {
+  font-weight: 100;
+  font-size: 12px;
+  opacity: .5;
+  margin-top: 6px;
+}
+
+.progress-note span.date {
+  font-size: 12px;
+  opacity: .5;
+}
+
+.progress-note .text {
+  border: 1px solid rgba(0,0,0,.3);
+  float: left;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+  margin-bottom: 4px;
+  margin-top: 20px;
+}
+.progress-note .text p {
+  overflow: hidden;
+  margin: 0;
+  text-overflow: ellipsis;
+}
+.progress-note .text:after {
+  position: absolute;
+  top: -11px;
+  left: 16px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(0,0,0,.25);
+  z-index: 1;
+}
+.progress-note .text:before {
+  z-index: 2;
+  position: absolute;
+  top: -9px;
+  left: 16px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgb(255, 255, 255);
+}
+
+
+.progress-note .fa {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #4b7cec;
+}
+
+.fa-edit {
+  display: none;
+}
+
+.progress-note:hover .fa-edit {
+  display: block;
+}
+
+.progress-note textarea {
+  resize: none;
+  float: left;
+  width: 100%;
+  height: 140px;
+  margin-top: 10px;
+}
+
+.progress-note .buttons {
+  float: right;
+  margin-top: 10px;
+}
+
+.progress-note .buttons div {
+  float: left;
+  margin-left: 10px;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(0,0,0,.3);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.progress-note .buttons .save {
+  border-color: #94e06a;
+}
+.progress-note .buttons .save i {
+  background: #94e06a;
+}
+.progress-note .buttons .cancel {
+  border-color: #fe6c6a;
+}
+.progress-note .buttons .cancel i {
+  background: #fe6c6a;
+}
+.progress-note .buttons i {
+  float: left;
+  font-style: normal;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  width: 20px;
+  margin: 4px 0 0 4px;
+  height: 20px;
+  border-radius: 100%;
+  text-align: center;
+}
+
+/* STYLES FOR BOTTOM POSITIONED DRAWER */
+.drawer.bottom .progress-note .header {
+  width: 240px;
+}
+.drawer.bottom .progress-note .text, .drawer.bottom .progress-note textarea {
+  width: calc(100% - 300px);
+  margin-top: 10px;
+}
+
+.drawer.bottom .progress-note textarea {
+  height: 60px;
+}
+
+.drawer.bottom .progress-note .text:before, .drawer.bottom .progress-note .text:after  {
+  transform: rotate(-90deg);
+  top: 13px;
+  left: -13px;
+}
+.drawer.bottom .progress-note .text:after  {
+  transform: rotate(-90deg);
+  top: 13px;
+  left: -15px;
+}
+.drawer.bottom .progress-note .date {
+  float: right;
+  margin-right: 60px;
+}
+
+.drawer.bottom .progress-note.edit .date {
+  display: none;
+}
+.drawer.bottom .progress-note .buttons {
+  margin-right: 54px;
+  margin-left: calc(100% - 150px);
+}

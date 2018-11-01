@@ -1,0 +1,8 @@
+.tabs {
+  float: right;
+}
+
+.bottom .tabs {
+  float: left;
+  margin-left: 20px;
+}
